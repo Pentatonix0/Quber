@@ -1,0 +1,8 @@
+.sun-editor {
+    border: 1px solid #ffffff !important;
+    overflow-y: auto !important;
+}
+
+.sun-editor .se-toolbar {
+    border: 1px solid #9ca3af;
+}
