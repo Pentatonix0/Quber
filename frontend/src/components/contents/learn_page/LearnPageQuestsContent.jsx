@@ -61,10 +61,11 @@ const LearnPageQuestsContent = () => {
                         />
                     </svg>
                     <h3 className="mt-4 text-lg font-medium text-gray-900">
-                        Нет созданных квестов
+                        Нет доступных квестов
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">
-                        Начните создание нового квеста через панель управления
+                        Добавьте новый квест по ссылке или через панель
+                        управления
                     </p>
                 </div>
             ) : (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../Auth';
-import AuthRequiredPage from './AuthRequiredPage';
+import AuthRequiredPage from '../../pages/AuthRequiredPage';
 
 const PrivateRoute = ({ children }) => {
     const [loading, setLoading] = useState(true);

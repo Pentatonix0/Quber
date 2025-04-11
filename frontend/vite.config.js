@@ -9,7 +9,7 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: 'http://localhost:5000',
+                target: 'http://api.pentatonix0.space',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ''),
             },

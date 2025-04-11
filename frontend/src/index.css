@@ -9,7 +9,3 @@ body {
     font-size: 18px;
     color: #000;
 }
-
-.toast-small-text .Toastify__toast-body {
-    font-size: 6px; /* Задайте нужный размер шрифта */
-}
