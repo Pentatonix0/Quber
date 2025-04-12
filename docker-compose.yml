@@ -16,18 +16,15 @@ services:
     networks:
       - dev
 
+
   backend:
     build:
       context: ./backend
-    volumes:
-      - ./backend:/app/backend
     networks:
       - dev
 
   frontend:
     build:
       context: ./frontend
-    volumes:
-      - ./frontend:/app
     networks:
       - dev
