@@ -1,7 +1,9 @@
 FROM python:3.11.9-slim
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install pipenv
+
+COPY Pipfile Pipfile.lock
+RUN pipenv install
 
 COPY . .
 

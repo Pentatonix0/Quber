@@ -13,7 +13,12 @@ app = Flask(__name__)
 app.config.from_object(config)
 app.config['JSON_AS_ASCII'] = False
 
-CORS(app, origins="http://localhost:5173")
+CORS(app, origins=[
+    "http://localhost:5173",
+    "http://109.73.206.205",
+    "http://pentatonix0.space"
+], supports_credentials=True)
+
 
 db.init_app(app)
 
