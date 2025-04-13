@@ -1,11 +1,13 @@
 FROM python:3.11.9-slim
 
 RUN pip install pipenv
-RUN pipenv shell
 
-COPY Pipfile Pipfile
-RUN pipenv install
+COPY Pipfile Pipfile.lock* ./
+
+RUN pipenv install --deploy --ignore-pipfile
 
 COPY . .
 
-CMD [ "python", "main.py" ]
+ENV PATH="/root/.local/bin:$PATH"
+
+CMD ["pipenv", "run", "python", "main.py"]
