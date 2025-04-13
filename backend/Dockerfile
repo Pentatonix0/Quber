@@ -1,13 +1,8 @@
-FROM python:3.11-slim
+FROM python:3.11.4-alpine3.18
 
-RUN pip install pipenv
-
-COPY Pipfile Pipfile.lock* ./
-
-RUN pipenv install --deploy --ignore-pipfile
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
-ENV PATH="/root/.local/bin:$PATH"
-
-CMD ["pipenv", "run", "python", "main.py"]
+CMD [ "python", "main.py" ]
