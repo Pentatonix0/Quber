@@ -35,7 +35,7 @@ nano .env
 3. Установите значения (пример)
 
 ```
-SECRET_KEY=4e31ea8b8350d37fed2f69f2
+SECRET_KEY=0dea1f18d9c570e676587436
 SQLALCHEMY_TRACK_MODIFICATIONS=True
 ```
 
