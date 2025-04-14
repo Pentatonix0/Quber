@@ -1,7 +1,6 @@
 import React from 'react';
 
 const safeAtob = (base64Str) => {
-    // Декодируем Base64 и возвращаем строку в оригинальном виде
     return decodeURIComponent(escape(atob(base64Str)));
 };
 
@@ -41,7 +40,6 @@ const TestsBlock = ({
             {expandedSections.tests && (
                 <div className="p-4 bg-white space-y-4">
                     <div className="space-y-4">
-                        {/* Управление количеством примеров */}
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">
                                 Количество примеров (максимум 5)
@@ -70,7 +68,6 @@ const TestsBlock = ({
                             </p>
                         </div>
 
-                        {/* Список тестов */}
                         {tests.map((test, index) => (
                             <div
                                 key={index}

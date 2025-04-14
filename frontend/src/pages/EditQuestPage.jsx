@@ -71,14 +71,12 @@ const EditQuestPage = () => {
                 },
                 getRequestConfig()
             );
-            console.log(response);
             updateTasks();
         } catch (error) {
             console.error('Error saving task:', error);
         }
     };
 
-    // Инициализация данных при загрузке
     useEffect(() => {
         getAllTasks();
     }, []);
@@ -101,7 +99,6 @@ const EditQuestPage = () => {
             });
         }
     };
-    // Обновление tasks при изменении полей
     useEffect(() => {
         updateTasks();
     }, [taskDescription]);

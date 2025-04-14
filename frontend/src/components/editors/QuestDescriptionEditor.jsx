@@ -29,7 +29,7 @@ const QuestDescriptionEditor = ({ description, handleChangeContents }) => {
                 resizingBar: false,
                 katex: katex,
                 buttonList: buttonList,
-                toolbarContainer: '.sun-editor', // Указываем селектор контейнера
+                toolbarContainer: '.sun-editor',
             }}
         />
     );

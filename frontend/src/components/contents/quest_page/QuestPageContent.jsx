@@ -28,11 +28,8 @@ const QuestPageContent = ({
     };
 
     useEffect(() => {
-        // Вызов defineTheme для загрузки и применения темы
         defineTheme(theme.value)
-            .then(() => {
-                console.log(`Тема "${theme.value}" успешно загружена!`);
-            })
+            .then(() => {})
             .catch((error) => {
                 console.error('Ошибка при загрузке темы:', error);
             });

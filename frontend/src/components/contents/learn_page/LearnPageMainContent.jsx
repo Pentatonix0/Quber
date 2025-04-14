@@ -4,10 +4,7 @@ const LearnPageMainContent = () => {
     return (
         <div className="px-10 py-5 w-full max-w-7xl bg-white">
             <div className="space-y-8">
-                {/* Заголовок секции */}
                 <h1 className="text-2xl font-normal">Учебный портал</h1>
-
-                {/* Блок с приглашением */}
                 <div className="space-y-4">
                     <div>
                         <label
@@ -30,7 +27,6 @@ const LearnPageMainContent = () => {
                     </p>
                 </div>
 
-                {/* Информационный баннер */}
                 <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
                     <div className="flex items-start">
                         <div className="flex-shrink-0">
@@ -63,7 +59,6 @@ const LearnPageMainContent = () => {
                     </div>
                 </div>
 
-                {/* Заглушка для будущего контента */}
                 <div className="border-2 border-dashed border-gray-200 rounded-lg p-8 text-center">
                     <p className="text-gray-500 text-sm">
                         Здесь скоро появится ваша персональная учебная

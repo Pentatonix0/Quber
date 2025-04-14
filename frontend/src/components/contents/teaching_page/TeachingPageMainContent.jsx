@@ -14,7 +14,6 @@ const TeachingPageMainContent = () => {
             </div>
 
             <div className="space-y-8">
-                {/* Информационный баннер */}
                 <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-200 shadow-sm">
                     <div className="flex items-start gap-4">
                         <div className="flex-shrink-0">
@@ -55,7 +54,6 @@ const TeachingPageMainContent = () => {
                     </div>
                 </div>
 
-                {/* Заглушка для будущего контента */}
                 <div className="bg-gray-50 rounded-xl p-8 text-center border-2 border-dashed border-gray-200 hover:border-gray-300 transition-colors">
                     <svg
                         className="mx-auto h-12 w-12 text-gray-400"

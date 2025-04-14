@@ -2,7 +2,6 @@ import React from 'react';
 
 const OutputWindow = ({ outputDetails, failed_test_number = null }) => {
     const safeAtob = (base64Str) => {
-        // Декодируем Base64 и возвращаем строку в оригинальном виде
         return decodeURIComponent(escape(atob(base64Str)));
     };
     const get_num = (num) => {
@@ -14,13 +13,10 @@ const OutputWindow = ({ outputDetails, failed_test_number = null }) => {
     };
     const getOutput = () => {
         let statusId = outputDetails?.status?.id;
-        console.log(outputDetails);
-        console.log('ststus', statusId);
         if (statusId === null) {
             return;
         }
         if (statusId === 6) {
-            // compilation error
             return (
                 <pre className="px-2 py-1 font-normal text-xs text-red-500 whitespace-pre-wrap break-words overflow-auto">
                     {safeAtob(outputDetails?.compile_output)}

@@ -4,7 +4,6 @@ import LogoLink from './LogoLink';
 const LoggedOutLinks = () => {
     return (
         <div className="w-full flex items-center">
-            {/* Логотип - прижат к левому краю */}
             <div className="flex-shrink-0">
                 <LogoLink />
             </div>

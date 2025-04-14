@@ -1,6 +1,4 @@
 import React from 'react';
-import SideBar from '../components/SideBar';
-import Navbar from '../components/navbar/Navbar';
 import { useAuth } from '../Auth';
 import LoggedOutPageContent from '../components/contents/LogOutPageContent';
 import LogInPageContent from '../components/contents/LogInPageContent';

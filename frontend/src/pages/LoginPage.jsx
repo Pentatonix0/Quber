@@ -8,7 +8,7 @@ import { login } from '../Auth';
 
 const LoginPage = () => {
     const navigate = useNavigate();
-    const [loginError, setLoginError] = useState(null); // Состояние для ошибки
+    const [loginError, setLoginError] = useState(null);
     const {
         register,
         handleSubmit,
@@ -17,7 +17,6 @@ const LoginPage = () => {
     } = useForm();
 
     const onSubmit = async (data) => {
-        console.log(data);
         const body = {
             username: data.login,
             password: data.password,

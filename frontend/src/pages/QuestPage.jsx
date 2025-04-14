@@ -38,7 +38,6 @@ const QuestPage = () => {
         }
 
         const checkStatus = async () => {
-            console.log('Checking status for solution:', solutionId);
             try {
                 const { data } = await axios.get(
                     `/api/quests/check-solution/${solutionId}/${token?.user_id}`,
@@ -49,13 +48,9 @@ const QuestPage = () => {
                     }
                 );
 
-                console.log('Status response:', data);
-
                 if (data.status === 'testing') {
-                    // Запускаем следующий опрос
                     pollingRef.current = setTimeout(() => checkStatus(), 1000);
                 } else {
-                    // Обновляем состояние и очищаем таймер
                     setSolutions((s) =>
                         s.map((solution) =>
                             solution.id === solutionId ? data : solution
@@ -69,7 +64,6 @@ const QuestPage = () => {
             }
         };
 
-        // Первый запуск
         checkStatus();
     };
     const getAllTasks = async () => {
@@ -84,7 +78,6 @@ const QuestPage = () => {
                 }
             );
             setTasks(response.data);
-            console.log(response.data);
         } catch (error) {
             console.error('Error fetching quests:', error);
         } finally {
@@ -165,7 +158,6 @@ const QuestPage = () => {
             if (response.data.status === 'testing') {
                 pollSolutionStatus(response.data.id);
             }
-            console.log('Solution updated:', response.data);
         } catch (error) {
             console.error('Error', error);
         }
@@ -186,7 +178,6 @@ const QuestPage = () => {
 
     useEffect(() => {
         if (solutions.length != 0) {
-            console.log('source', solutions[currentTaskIndex].source_code);
             setSourceCode(safeAtob(solutions[currentTaskIndex].source_code));
             const newAvailableLanguages = languages.filter((lang) =>
                 tasks[currentTaskIndex].languages.includes(lang.id)
@@ -203,9 +194,7 @@ const QuestPage = () => {
                     : newAvailableLanguages[0]
             );
             setStatus(solutions[currentTaskIndex].status);
-            console.log('lang', language);
         }
-        console.log(solutions);
     }, [currentTaskIndex, solutions]);
 
     useEffect(() => {

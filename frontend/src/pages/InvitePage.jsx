@@ -7,19 +7,17 @@ import 'react-toastify/dist/ReactToastify.css';
 const InvitePage = () => {
     const { invite_code } = useParams();
     const navigate = useNavigate();
-    const isExecuted = useRef(false); // Флаг выполнения запроса
+    const isExecuted = useRef(false);
     const token = JSON.parse(localStorage.getItem('REACT_TOKEN_AUTH_KEY'));
 
     useEffect(() => {
-        // Проверяем что запрос еще не выполнялся и есть код приглашения
         if (isExecuted.current || !invite_code) return;
 
-        const controller = new AbortController(); // Для отмены запроса
+        const controller = new AbortController();
         isExecuted.current = true;
 
         const sendInviteCode = async () => {
             try {
-                console.log(token);
                 const response = await axios.post(
                     `/api/quests/add-participant/${invite_code}/${token.user_id}`,
                     {},
@@ -58,9 +56,8 @@ const InvitePage = () => {
 
         sendInviteCode();
 
-        // Очистка эффекта - отмена запроса при размонтировании
         return () => controller.abort();
-    }, [invite_code]); // Зависимости только от invite_code
+    }, [invite_code]);
 
     return null;
 };

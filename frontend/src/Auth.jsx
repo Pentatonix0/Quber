@@ -1,6 +1,5 @@
 import { createAsyncAuthProvider } from 'react-token-auth';
 
-// Убираем типизацию Session
 export const { useAuth, authFetch, login, logout } = createAsyncAuthProvider({
     accessTokenKey: 'access_token',
     accessTokenExpireKey: 'exp',

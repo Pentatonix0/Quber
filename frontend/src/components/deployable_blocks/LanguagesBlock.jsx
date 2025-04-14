@@ -8,11 +8,9 @@ const LanguadesBlock = ({
     toggleSection,
     handleLanguageToggle,
 }) => {
-    // Сортируем языки по name (алфавиту) перед отображением
     const sortedLanguages = [...languages].sort((a, b) =>
         a.name.localeCompare(b.name)
     );
-    console.log(sortedLanguages);
 
     const selectAllLanguages = () => {
         setSelectedLanguages(sortedLanguages.map((lang) => lang.id));

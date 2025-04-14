@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const LogInPageContent = () => {
     return (
         <div className="min-h-screen bg-white">
-            {/* Герой-секция */}
             <div className="py-20 px-6 max-w-7xl mx-auto text-center">
                 <h1 className="text-5xl font-normal text-gray-800 mb-6">
                     Добро пожаловать в Quber
@@ -24,7 +23,6 @@ const LogInPageContent = () => {
                     </Link>
                 </div>
 
-                {/* Преимущества */}
                 <div className="grid md:grid-cols-3 gap-8 mb-24">
                     <div className="p-6 border border-gray-300 rounded-lg hover:shadow-md transition-shadow">
                         <div className="text-blue-600 text-4xl mb-4">👨💻</div>
@@ -60,7 +58,6 @@ const LogInPageContent = () => {
                     </div>
                 </div>
 
-                {/* Как это работает */}
                 <div className="py-12 border-t border-gray-200">
                     <h2 className="text-3xl font-normal text-gray-800 mb-8">
                         Создайте свой квест за 3 шага
@@ -108,7 +105,6 @@ const LogInPageContent = () => {
                     </div>
                 </div>
 
-                {/* Призыв к действию */}
                 <div className="mt-16 bg-gray-50 rounded-xl p-8 border-2 border-dashed border-gray-200">
                     <h2 className="text-2xl font-normal text-gray-800 mb-4">
                         Начните прямо сейчас!

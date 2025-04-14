@@ -16,13 +16,10 @@ const TeachingPageNewQuestContent = () => {
     } = useForm();
 
     const onSubmit = async (data) => {
-        console.log(data);
         const body = {
             title: data.title,
             author_id: token.user_id,
         };
-        console.log(body);
-        console.log(token);
 
         try {
             await axios.post('/api/quests/create-quest', body, {

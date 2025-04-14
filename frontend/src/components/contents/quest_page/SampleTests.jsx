@@ -2,7 +2,6 @@ import React from 'react';
 
 const SampleTests = ({ tests, sampleCount }) => {
     const safeAtob = (base64Str) => {
-        // Декодируем Base64 и возвращаем строку в оригинальном виде
         return decodeURIComponent(escape(atob(base64Str)));
     };
     const displayedTests = tests.slice(0, sampleCount);

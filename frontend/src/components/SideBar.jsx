@@ -3,15 +3,15 @@ import { Link, useLocation } from 'react-router-dom';
 import { memo } from 'react';
 
 const learnSideBarItems = {
-    'Моё обучение': '', // Будет вести на /learn
-    Квесты: 'quests', // Будет вести на /learn/quests
-    Классы: 'classes', // Будет вести на /learn/classes
+    'Моё обучение': '',
+    Квесты: 'quests',
+    Классы: 'classes',
 };
 
 const teachingSideBarItems = {
-    'Моё преподавание': '', // Будет вести на /teach
-    Квесты: 'quests', // Будет вести на /teach/quests
-    Классы: 'classes', // Будет вести на /teach/classes
+    'Моё преподавание': '',
+    Квесты: 'quests',
+    Классы: 'classes',
 };
 
 const SideBar = memo(() => {
@@ -23,12 +23,10 @@ const SideBar = memo(() => {
     }, [location.pathname]);
 
     const SideBarItem = ({ name, href }) => {
-        // Формируем полный путь
         const fullPath = isTeaching
             ? `/teach${href ? `/${href}` : ''}`
             : `/learn${href ? `/${href}` : ''}`;
 
-        // Проверяем активность пункта
         const isActive = href
             ? location.pathname === fullPath
             : location.pathname === (isTeaching ? '/teach' : '/learn');
@@ -52,7 +50,6 @@ const SideBar = memo(() => {
     return (
         <div className="h-screen w-64 border-r border-gray-400 fixed top-100">
             <div className="flex flex-col">
-                {/* Логотип */}
                 <div className="p-4 border-b border-gray-200">
                     <img
                         src={isTeaching ? '/img2.png' : '/img1.png'}

@@ -4,7 +4,7 @@ const EditTaskNavigationBar = ({
     tasks,
     currentTaskIndex,
     setCurrentTaskIndex,
-    onAddTask, // Добавляем пропс для обработки добавления задания
+    onAddTask,
 }) => {
     return (
         <div className="flex py-2 px-6 bg-white border-b border-gray-200">
@@ -28,7 +28,6 @@ const EditTaskNavigationBar = ({
                         {index + 1}
                     </button>
                 ))}
-                {/* Кнопка добавления нового задания */}
                 {tasks.length < 20 && (
                     <button
                         onClick={onAddTask}

@@ -6,9 +6,6 @@ const EditQuestSideBar = memo(
     ({ isAuthor = false, handleSaveChanges, quest_id }) => {
         return (
             <div className="flex flex-col h-screen w-64 border-r border-gray-400 fixed top-100">
-                {' '}
-                {/* Добавлен margin-left */}
-                {/* Блок с логотипом */}
                 <div className="p-4 border-b border-gray-200">
                     <img
                         src="/img3.png"
@@ -16,7 +13,6 @@ const EditQuestSideBar = memo(
                         className="w-full h-auto rounded-lg"
                     />
                 </div>
-                {/* Основной контент с прокруткой */}
                 <div className="flex-1 overflow-y-auto">
                     {isAuthor && (
                         <div className="px-6 py-2">

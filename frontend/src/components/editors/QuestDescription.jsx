@@ -1,7 +1,6 @@
 import React from 'react';
 import SunEditor from 'suneditor-react';
 import 'suneditor/dist/css/suneditor.min.css';
-// import './Editor.css';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
@@ -19,7 +18,7 @@ const QuestDescriptionEditor = ({ description }) => {
                 resizingBar: false,
                 katex: katex,
                 buttonList: buttonList,
-                toolbarContainer: '.sun-editor', // Указываем селектор контейнера
+                toolbarContainer: '.sun-editor',
             }}
         />
     );

@@ -12,12 +12,10 @@ const LoggedInUserLinks = () => {
 
     return (
         <div className="w-full flex items-center">
-            {/* Логотип - прижат к левому краю */}
             <div className="flex-shrink-0">
                 <LogoLink />
             </div>
 
-            {/* Навигация - после логотипа с автоматическим отступом */}
             <nav className="flex space-x-6 ml-6">
                 <Link
                     className={`text-base font-normal hover:underline ${
@@ -41,7 +39,6 @@ const LoggedInUserLinks = () => {
                 </Link>
             </nav>
 
-            {/* Аккаунт - всегда прижат к правому краю */}
             <div className="mr-1 flex-shrink-0 ml-auto">
                 <AccountLink />
             </div>

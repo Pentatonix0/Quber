@@ -3,12 +3,10 @@ import axios from 'axios';
 import OutputWindow from '../../../pages/OutputWindow';
 
 const safeBtoa = (str) => {
-    // Преобразуем строку в UTF-8 с использованием encodeURIComponent
     return btoa(unescape(encodeURIComponent(str)));
 };
 
 const safeAtob = (base64Str) => {
-    // Декодируем Base64 и возвращаем строку в оригинальном виде
     return decodeURIComponent(escape(atob(base64Str)));
 };
 const CodeRunner = ({
@@ -48,7 +46,6 @@ const CodeRunner = ({
             max_processes_and_or_threads:
                 compilerSettings.max_processes_and_or_threads,
         };
-        console.log(body);
         try {
             const response = await axios.post('/api/code/run-code', body, {
                 headers: {
@@ -56,7 +53,6 @@ const CodeRunner = ({
                     Authorization: `Bearer ${token?.access_token}`,
                 },
             });
-            console.log(response.data);
             setOutput(response.data);
         } catch (error) {
             console.error('There was an error in code runner:', error);

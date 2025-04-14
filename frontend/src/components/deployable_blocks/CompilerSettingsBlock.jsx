@@ -36,7 +36,6 @@ const CompilerSettingsBlock = ({
             {expandedSections.limits && (
                 <div className="p-4 bg-white">
                     <div className="space-y-4">
-                        {/* Кнопка сброса настроек */}
                         <div className="flex justify-end">
                             <button
                                 onClick={resetToDefaults}
@@ -46,7 +45,6 @@ const CompilerSettingsBlock = ({
                             </button>
                         </div>
 
-                        {/* Числовые настройки с min/max */}
                         {[
                             {
                                 field: 'cpu_time_limit',

@@ -14,7 +14,6 @@ const defaultCompilerSettings = {
 const defaultTest = { stdin: '', stdout: '' };
 
 const safeBtoa = (str) => {
-    // Преобразуем строку в UTF-8 с использованием encodeURIComponent
     return btoa(unescape(encodeURIComponent(str)));
 };
 
@@ -107,8 +106,8 @@ const EditPageContent = ({
 
     const handlePointsChange = (e) => {
         let value = parseInt(e.target.value, 10) || 1;
-        value = Math.max(1, value); // Минимум 1 балл
-        value = Math.min(value, 10); // Максимум 10 баллов
+        value = Math.max(1, value);
+        value = Math.min(value, 10);
         setPoints(value);
     };
 
