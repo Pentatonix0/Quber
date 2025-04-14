@@ -15,6 +15,7 @@ const QuestDescriptionEditor = ({ description }) => {
             setDefaultStyle="font-family: IBM Plex Sans; font-size: 16px; color:rgb(31, 41, 55)"
             setOptions={{
                 minHeight: 25,
+                height: 'auto',
                 resizingBar: false,
                 katex: katex,
                 buttonList: buttonList,
