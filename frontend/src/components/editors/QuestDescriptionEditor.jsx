@@ -8,8 +8,8 @@ import 'katex/dist/katex.min.css';
 const buttonList = [
     ['undo', 'redo'],
     ['font', 'fontSize', 'formatBlock'],
-    ['remove format'],
     ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
+    ['removeFormat'],
     ['math'],
     '/',
     ['fontColor', 'hiliteColor'],
