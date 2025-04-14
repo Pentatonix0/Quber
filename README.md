@@ -23,7 +23,6 @@
 
 ```
 git clone https://github.com/Pentatonix0/Quber.git
-cd Quber
 ```
 
 2. Создайте .env файл
