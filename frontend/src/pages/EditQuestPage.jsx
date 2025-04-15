@@ -81,14 +81,13 @@ const EditQuestPage = () => {
                 getRequestConfig()
             );
             updateTasks();
-        } catch (error) {
-            console.error('Error saving task:', error);
-            toast.error(error.response?.data?.message || 'Ошибка сохранения', {
+            toast.success('Изменения сохранены!', {
                 position: 'top-right',
                 autoClose: 3000,
             });
-        } finally {
-            toast.success('Изменения сохранены!', {
+        } catch (error) {
+            console.error('Error saving task:', error);
+            toast.error(error.response?.data?.message || 'Ошибка сохранения', {
                 position: 'top-right',
                 autoClose: 3000,
             });
