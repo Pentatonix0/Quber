@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import EditQuestSideBar from '../components/contents/edit_quest_page/EditSideBar';
 import EditPageContent from '../components/contents/edit_quest_page/EditPageContent';
 import EditTaskNavigationBar from '../components/bars/EditTasksNavigationBar';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const EditQuestPage = () => {
     const [isBlankPage, setIsBlankPage] = useState(false);
@@ -57,6 +59,13 @@ const EditQuestPage = () => {
 
     const handleSaveChanges = async () => {
         try {
+            if (selectedLanguages.length === 0) {
+                toast.warn('Вы должны выбрать хотя бы 1 язык', {
+                    position: 'top-right',
+                    autoClose: 3000,
+                });
+                return;
+            }
             const response = await axios.post(
                 `/api/quests/${quest_id}/update-task`,
                 {
@@ -74,6 +83,15 @@ const EditQuestPage = () => {
             updateTasks();
         } catch (error) {
             console.error('Error saving task:', error);
+            toast.error(error.response?.data?.message || 'Ошибка сохранения', {
+                position: 'top-right',
+                autoClose: 3000,
+            });
+        } finally {
+            toast.success('Изменения сохранены!', {
+                position: 'top-right',
+                autoClose: 3000,
+            });
         }
     };
 
