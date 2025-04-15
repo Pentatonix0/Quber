@@ -80,8 +80,6 @@ const QuestPage = () => {
             setTasks(response.data);
         } catch (error) {
             console.error('Error fetching quests:', error);
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -99,8 +97,6 @@ const QuestPage = () => {
             setSolutions(response.data);
         } catch (error) {
             console.error('Error', error);
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -174,6 +170,7 @@ const QuestPage = () => {
         getAllTasks();
         getAllSolutions();
         checkAuthor();
+        setLoading(false);
     }, []);
 
     useEffect(() => {
