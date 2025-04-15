@@ -165,16 +165,24 @@ const QuestPage = () => {
         },
         []
     );
-
     useEffect(() => {
-        getAllTasks();
-        getAllSolutions();
-        checkAuthor();
-        setLoading(false);
+        const loadData = async () => {
+            try {
+                await getAllTasks();
+                await getAllSolutions();
+                await checkAuthor();
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadData();
     }, []);
 
     useEffect(() => {
-        if (solutions.length != 0) {
+        if (solutions.length != 0 && !loading) {
             setSourceCode(safeAtob(solutions[currentTaskIndex].source_code));
             const newAvailableLanguages = languages.filter((lang) =>
                 tasks[currentTaskIndex].languages.includes(lang.id)
