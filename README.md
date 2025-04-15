@@ -1,7 +1,7 @@
 # Quber - Платформа для создания квестов по программированию
 
 [![Демо](https://img.shields.io/badge/Демо-сайт-blue?style=for-the-badge&logo=google-chrome)](https://pentatonix0.space)
-[![Пример квеста](https://img.shields.io/badge/Пример_квеста-purple?style=for-the-badge&logo=python)](https://pentatonix0.space/invite/c9c02f1881bba3edb74eb117cacb7ca8)
+[![Пример квеста](https://img.shields.io/badge/Пример_квеста-purple?style=for-the-badge&logo=python)](https://pentatonix0.space/invite/1da1e243882b7cd62ed07e8d06a4c4f8)
 
 Платформа для создания и прохождения интерактивных квестов по программированию с возможностью организации учебных классов и отслеживания прогресса.
 
